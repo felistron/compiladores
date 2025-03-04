@@ -155,7 +155,7 @@ public class Lexer {
                 case 2 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.OP_REL, lexema); // dif
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // dif
                 }
                 case 3 -> {
                     char c = leerCaracter();
@@ -167,13 +167,13 @@ public class Lexer {
                 case 4 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.OP_REL, lexema); // mayor igual
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // mayor igual
                 }
                 case 5 -> {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.OP_REL, lexema); // mayor
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // mayor
                 }
                 case 6 -> {
                     char c = leerCaracter();
@@ -185,13 +185,13 @@ public class Lexer {
                 case 7 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.OP_REL, lexema); // igual
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // igual
                 }
                 case 8 -> {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.ASIG, lexema); // asignación
+                    return new Token(TokenType.ASIG, lexema, linea, columna - lexema.length()); // asignación
                 }
                 case 9 -> {
                     char c = leerCaracter();
@@ -203,13 +203,13 @@ public class Lexer {
                 case 10 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.OP_REL, lexema); // menor igual
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // menor igual
                 }
                 case 11 -> {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.OP_REL, lexema); // menor
+                    return new Token(TokenType.OP_REL, lexema, linea, columna - lexema.length()); // menor
                 }
                 case 12 -> {
                     char c = leerCaracter();
@@ -233,7 +233,7 @@ public class Lexer {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.ID, lexema); // id
+                    return new Token(TokenType.ID, lexema, linea, columna - lexema.length()); // id
                 }
                 case 15 -> {
                     char c = leerCaracter();
@@ -273,7 +273,7 @@ public class Lexer {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.NUM, lexema); // número
+                    return new Token(TokenType.NUM, lexema, linea, columna - lexema.length()); // número
                 }
                 case 20 -> {
                     char c = leerCaracter();
@@ -295,7 +295,7 @@ public class Lexer {
                     String lexema = programa.substring(inicio, avance - 1);
                     inicio = --avance;
                     columna--;
-                    return new Token(TokenType.NUM, lexema); // número
+                    return new Token(TokenType.NUM, lexema, linea, columna - lexema.length()); // número
                 }
                 case 23 -> {
                     char c = leerCaracter();
@@ -310,22 +310,22 @@ public class Lexer {
                 case 24 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.BIN_OP, lexema); // sum
+                    return new Token(TokenType.BIN_OP, lexema, linea, columna - lexema.length()); // sum
                 }
                 case 25 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.BIN_OP, lexema); // res
+                    return new Token(TokenType.BIN_OP, lexema, linea, columna - lexema.length()); // res
                 }
                 case 26 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.BIN_OP, lexema); // mul
+                    return new Token(TokenType.BIN_OP, lexema, linea, columna - lexema.length()); // mul
                 }
                 case 27 -> {
                     String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return new Token(TokenType.BIN_OP, lexema); // div
+                    return new Token(TokenType.BIN_OP, lexema, linea, columna - lexema.length()); // div
                 }
                 case 28 -> {
                     char c = leerCaracter();
