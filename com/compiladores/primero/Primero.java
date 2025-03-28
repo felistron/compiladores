@@ -1,18 +1,23 @@
 /*
+ * Titulo: Analizador Lexicográfico con diagramas de transición.
  * Autor: Fernando Espinosa
  * Fecha: 2025/02/25
  */
 
-package com.compiladores;
+package com.compiladores.primero;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.List;
+
+import com.compiladores.Token;
+import com.compiladores.TokenType;
+
 import java.util.ArrayList;
 
-public class Lexer {
+public class Primero {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -366,8 +371,9 @@ public class Lexer {
                     }
                 }
                 case 32 -> {
+                    String lexema = programa.substring(inicio, avance);
                     inicio = avance;
-                    return null;
+                    return new Token(TokenType.EOF, lexema, linea, columna - lexema.length()); // eof
                 }
             }
         }

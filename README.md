@@ -14,7 +14,7 @@ Colección de programas para la clase de Compiladores en el periodo 2025A.
 mkdir build
 ```
 
-## 1. Analizador lexicográfico
+## 1. Primer analizador lexicográfico
 
 Programa para simular un analizador lexicográfico para un lenguaje establecido.
 El lenguaje está descrito en el diagrama `lenguaje.dot` con [Graphviz](https://graphviz.org/doc/info/lang.html).
@@ -29,11 +29,22 @@ dot -Tsvg lenguaje.dot > imagenes/lenguaje.svg
 
 ### Compilar
 ```sh
-javac com/compiladores/Lexer.java -d build
+javac com/compiladores/primero/Primero.java -d build
 ```
-
 
 ### Ejecutar
 ```sh
-java -classpath build com.compiladores.Lexer <directorio/hacia/programa.pro>
+java -classpath build com.compiladores.primero.Primero <directorio/hacia/programa.p1>
+```
+
+## 2. Segundo analizador lexicográfico
+
+### Compilar
+```sh
+javac com/compiladores/segundo/Segundo.java -d build
+```
+
+### Ejecutar
+```sh
+java -classpath build com.compiladores.segundo.Segundo <directorio/hacia/programa.p2>
 ```
