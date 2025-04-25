@@ -2,6 +2,11 @@
 m (10.2 > hola)
     x
     y
+    // segundo mientras
+    m (id < 10)
+        x
+        x
+        y
+        x
+    fm
 fm
-x
-y
