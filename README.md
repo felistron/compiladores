@@ -37,7 +37,7 @@ javac com/compiladores/primero/Primero.java -d build
 java -classpath build com.compiladores.primero.Primero <directorio/hacia/programa.p1>
 ```
 
-## 2. Segundo analizador lexicográfico
+## 2. Parser recursivo descendente
 
 ### Compilar
 ```sh
@@ -47,4 +47,16 @@ javac com/compiladores/segundo/Segundo.java -d build
 ### Ejecutar
 ```sh
 java -classpath build com.compiladores.segundo.Segundo <directorio/hacia/programa.p2>
+```
+
+## 3. Parser LL(1)
+
+### Compilar
+```sh
+javac com/compiladores/tercero/Tercero.java -d build
+```
+
+### Ejecutar
+```sh
+java -classpath build com.compiladores.tercero.Tercero <directorio/hacia/programa.p2>
 ```
