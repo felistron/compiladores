@@ -60,3 +60,15 @@ javac com/compiladores/tercero/Tercero.java -d build
 ```sh
 java -classpath build com.compiladores.tercero.Tercero <directorio/hacia/programa.p2>
 ```
+
+## 4. Parser SLR(1)
+
+### Compilar
+```sh
+javac com/compiladores/cuarto/Cuarto.java -d build
+```
+
+### Ejecutar
+```sh
+java -classpath build com.compiladores.cuarto.Cuarto <directorio/hacia/programa.p2>
+```
